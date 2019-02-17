@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-out=""
+out="\n"
 for file in "$@"; do
   name="$(jq -r .name "$file")"
   desc="$(jq -r .description "$file")"
