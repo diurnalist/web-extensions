@@ -1,0 +1,31 @@
+{
+  "name": "royalflush",
+  "version": "1.0.0",
+  "description": "Automatically removes unimportant information concerning monarchies from most news agencies.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "npm-run-all build:*",
+    "build:webpack": "webpack --mode=production",
+    "build:web-ext": "web-ext build --artifacts-dir=dist",
+    "lint": "npm-run-all lint:*",
+    "lint:web-ext": "web-ext lint",
+    "start": "web-ext run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitub.com/diurnalist/browser-extensions"
+  },
+  "author": "Jason Anderson <diurnalist@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "npm-run-all": "^4.1.5",
+    "web-ext": "^2.9.3",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {}
+}
