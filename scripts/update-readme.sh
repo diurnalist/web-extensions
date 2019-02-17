@@ -4,10 +4,10 @@ out="\ "
 for file in "$@"; do
   name="$(jq -r .name "$file")"
   desc="$(jq -r .description "$file")"
-  out="$out\n**[$name](./$(dirname "$file"))**: $desc\n"
+  out="$out\n**[$name]($(dirname "$file"))**: $desc\n"
 done
 
-lead='# BEGIN INVENTORY$'
-tail='# END INVENTORY$'
+lead='^<!-- BEGIN INVENTORY -->$'
+tail='^<!-- END INVENTORY -->$'
 sed -i.bak -e "/$lead/,/$tail/{ /$lead/{p; a $out
 }; /$tail/p; d }" README.md && rm README.md.bak
