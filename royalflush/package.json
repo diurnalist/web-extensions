@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:webpack": "webpack --mode=production",
-    "build:web-ext": "web-ext build --artifacts-dir=dist",
+    "build:web-ext": "web-ext build",
     "lint": "npm-run-all lint:*",
     "lint:web-ext": "web-ext lint",
     "start": "web-ext run",
