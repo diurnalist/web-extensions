@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-out="\n"
+out="\ "
 for file in "$@"; do
   name="$(jq -r .name "$file")"
   desc="$(jq -r .description "$file")"
-  out="$out**[$name](./$(dirname "$file"))**: $desc\n"
+  out="$out\n**[$name](./$(dirname "$file"))**: $desc\n"
 done
 
 lead='# BEGIN INVENTORY$'
