@@ -10,6 +10,16 @@ This is a collection of some browser extensions I've developed for fun. Each ext
 
 <!-- END INVENTORY -->
 
-## Creating a new extension
+## Developing extensions
 
 Use the `scripts/new-extension.sh` script to create a new boilerplate extension, based on the current contents of the `template/` directory.
+
+To install dependencies and run package tasks, use the `scripts/run.sh` run helper. This script will enable you to develop within a containerized Node environment.
+
+```
+# Run `npm install` in the `my_package` directory
+./scripts/run.sh my_package npm install
+
+# Get an interactive shell in the `my_package` directory
+./scripts/run.sh my_package bash
+```
