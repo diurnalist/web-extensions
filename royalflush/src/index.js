@@ -6,7 +6,7 @@ const SELECTORS = [
   '.article' // Daily Mail
 ];
 
-const termDetectRegex = /\b(duchess|harry|kate|markle|meghan|middleton|prince|queen|royal|willam)/i;
+const termDetectRegex = /\b(duchess|harry|kate|markle|meghan|middleton|prince|queen|royal|willam)\b/i;
 
 function detectArticles() {
   return [...document.querySelectorAll(SELECTORS.join(','))].filter((node) => {
